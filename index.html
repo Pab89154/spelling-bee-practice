@@ -434,9 +434,257 @@
 
       .footer {
         margin-top: 2rem;
+        text-align: center;
         font-size: 0.85rem;
         color: #ffffff;
         text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+
+      .footer-link {
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: underline;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: #ffffff;
+        border: 2px solid rgba(28, 25, 23, 0.2);
+        color: var(--bee-black);
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-bottom: 1.25rem;
+      }
+
+      .back-btn:hover {
+        background: var(--bee-yellow);
+      }
+
+      .form-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        border: 2px solid rgba(245, 158, 11, 0.35);
+        box-shadow: 0 4px 20px rgba(245, 158, 11, 0.12);
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--bee-black);
+        margin-bottom: 0.35rem;
+        text-align: center;
+      }
+
+      .form-intro {
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+        font-size: 0.95rem;
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .form-field label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--honey-dark);
+        margin-bottom: 0.35rem;
+      }
+
+      .form-field input,
+      .form-field textarea {
+        width: 100%;
+        padding: 0.7rem 0.85rem;
+        border: 2px solid #fde68a;
+        border-radius: calc(var(--radius) - 4px);
+        font-family: inherit;
+        font-size: 1rem;
+        color: var(--text);
+        background: #fff;
+      }
+
+      .form-field textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-field input:focus,
+      .form-field textarea:focus {
+        outline: none;
+        border-color: var(--honey);
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+      }
+
+      .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+
+      .submit-btn {
+        flex: 1;
+        min-width: 160px;
+        padding: 0.85rem 1.25rem;
+        background: linear-gradient(135deg, var(--honey), var(--honey-dark));
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .cancel-btn {
+        padding: 0.85rem 1.25rem;
+        background: #e7e5e4;
+        color: var(--text);
+        border: none;
+        border-radius: var(--radius);
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .form-error {
+        background: #fee2e2;
+        border: 1px solid #fecaca;
+        color: #991b1b;
+        padding: 0.85rem 1rem;
+        border-radius: calc(var(--radius) - 4px);
+        font-size: 0.95rem;
+      }
+
+      .form-success {
+        background: #dcfce7;
+        border: 1px solid #bbf7d0;
+        color: #166534;
+        padding: 1rem;
+        border-radius: calc(var(--radius) - 4px);
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .admin-section-title {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--bee-black);
+        margin: 1.5rem 0 0.75rem;
+      }
+
+      .admin-section-title:first-of-type {
+        margin-top: 0;
+      }
+
+      .results-info {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .review-list {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .review-item {
+        background: #fffbeb;
+        border: 2px solid rgba(245, 158, 11, 0.25);
+        border-radius: 12px;
+        padding: 1rem;
+      }
+
+      .review-item.read-item {
+        opacity: 0.88;
+        border-style: dashed;
+      }
+
+      .review-item-header {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+
+      .review-item-emoji {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .review-item-name {
+        font-weight: 700;
+        color: var(--bee-black);
+      }
+
+      .review-meta {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-top: 0.15rem;
+      }
+
+      .review-facts {
+        margin: 0.85rem 0 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .review-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .approve-btn {
+        padding: 0.55rem 1rem;
+        border-radius: 999px;
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        background: var(--green);
+        color: white;
+      }
+
+      .pin-panel {
+        max-width: 360px;
+        margin: 0 auto 1.25rem;
+        text-align: center;
+      }
+
+      .empty-review {
+        text-align: center;
+        color: var(--text-muted);
+        padding: 1.5rem 1rem;
       }
     </style>
   </head>
@@ -517,9 +765,81 @@
             <button class="menu-btn" id="main-menu-btn" type="button">Go back to main menu</button>
           </div>
         </section>
+
+        <!-- Send feedback -->
+        <section class="card hidden" id="feedback-screen">
+          <button type="button" class="back-btn" id="feedback-back-btn">← Back to home</button>
+          <div class="form-card">
+            <h2 class="form-title">Send Feedback</h2>
+            <p class="form-intro">
+              Tell us what you think about Spelling Bee Practice! Your ideas help make the site better.
+            </p>
+            <form id="feedback-form" class="form-grid" novalidate>
+              <div class="form-field">
+                <label for="feedback-name">Your first name (optional)</label>
+                <input id="feedback-name" name="name" maxlength="30" placeholder="Alex" />
+              </div>
+              <div class="form-field">
+                <label for="feedback-message">Your feedback</label>
+                <textarea
+                  id="feedback-message"
+                  name="message"
+                  maxlength="500"
+                  placeholder="What do you like? What could be better?"
+                ></textarea>
+              </div>
+              <div id="feedback-form-error-box" class="form-error" hidden></div>
+              <div id="feedback-form-success-box" class="form-success" hidden></div>
+              <div class="form-actions">
+                <button type="submit" class="submit-btn">Send feedback</button>
+                <button type="button" class="cancel-btn" id="feedback-cancel-btn">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Read feedback (Admin) -->
+        <section class="card hidden" id="read-feedback-screen">
+          <button type="button" class="back-btn" id="read-feedback-back-btn">← Back to home</button>
+          <div class="form-card">
+            <h2 class="form-title">Read Feedback</h2>
+            <p class="form-intro">Read messages from people who used the spelling bee site.</p>
+
+            <div id="pin-panel" class="pin-panel">
+              <div class="form-field">
+                <label for="read-feedback-pin">Admin password</label>
+                <input id="read-feedback-pin" type="password" placeholder="Enter password" />
+              </div>
+              <button type="button" class="submit-btn" id="read-feedback-unlock-btn" style="width: 100%; margin-top: 0.75rem">
+                Unlock feedback
+              </button>
+              <p class="form-intro" style="margin-top: 0.75rem; font-size: 0.82rem">
+                Enter the admin password to read feedback.
+              </p>
+            </div>
+
+            <div id="read-feedback-panel" hidden>
+              <h3 class="admin-section-title">New feedback</h3>
+              <p class="results-info" id="feedback-count"></p>
+              <div class="review-list" id="feedback-list"></div>
+              <div class="empty-review" id="empty-feedback" hidden>No new feedback right now.</div>
+
+              <h3 class="admin-section-title">Read</h3>
+              <p class="results-info" id="feedback-read-count"></p>
+              <div class="review-list" id="feedback-read-list"></div>
+              <div class="empty-review" id="empty-read-feedback" hidden>No read feedback yet.</div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer class="footer">Made for spelling champions like you! 🏆</footer>
+      <footer class="footer">
+        <p>Made for spelling champions like you! 🏆</p>
+        <div class="footer-links">
+          <button type="button" class="footer-link" id="feedback-link">💬 Send feedback</button>
+          <button type="button" class="footer-link" id="read-feedback-link">Read feedback (Admin)</button>
+        </div>
+      </footer>
     </div>
 
     <script>
@@ -731,6 +1051,9 @@
 
       const WORDS_PER_ROUND = 10;
       const HINT_COST = 5;
+      const STORAGE_FEEDBACK = "spellingBee_feedback";
+      const FEEDBACK_EMAIL = "pmolinasamayoa@icloud.com";
+      const REVIEW_PIN = "spellingbee";
 
       let selectedGrade = "3";
       let currentWord = null;
@@ -741,11 +1064,16 @@
       let answered = false;
       let points = 0;
       let hintUsedThisWord = false;
+      let feedbackUnlocked = false;
+      let memoryFeedback = null;
 
       const gradeGrid = document.getElementById("grade-grid");
       const setupScreen = document.getElementById("setup-screen");
       const gameScreen = document.getElementById("game-screen");
       const resultsScreen = document.getElementById("results-screen");
+      const feedbackScreen = document.getElementById("feedback-screen");
+      const readFeedbackScreen = document.getElementById("read-feedback-screen");
+      const allScreens = [setupScreen, gameScreen, resultsScreen, feedbackScreen, readFeedbackScreen];
       const startBtn = document.getElementById("start-btn");
       const gradeBadge = document.getElementById("grade-badge");
       const hearBtn = document.getElementById("hear-btn");
@@ -767,6 +1095,276 @@
       const resultsWrong = document.getElementById("results-wrong");
       const playAgainBtn = document.getElementById("play-again-btn");
       const mainMenuBtn = document.getElementById("main-menu-btn");
+      const feedbackLink = document.getElementById("feedback-link");
+      const readFeedbackLink = document.getElementById("read-feedback-link");
+      const feedbackBackBtn = document.getElementById("feedback-back-btn");
+      const feedbackCancelBtn = document.getElementById("feedback-cancel-btn");
+      const feedbackForm = document.getElementById("feedback-form");
+      const feedbackFormErrorBox = document.getElementById("feedback-form-error-box");
+      const feedbackFormSuccessBox = document.getElementById("feedback-form-success-box");
+      const readFeedbackBackBtn = document.getElementById("read-feedback-back-btn");
+      const readFeedbackUnlockBtn = document.getElementById("read-feedback-unlock-btn");
+      const readFeedbackPinInput = document.getElementById("read-feedback-pin");
+      const pinPanel = document.getElementById("pin-panel");
+      const readFeedbackPanel = document.getElementById("read-feedback-panel");
+      const feedbackList = document.getElementById("feedback-list");
+      const feedbackCount = document.getElementById("feedback-count");
+      const emptyFeedback = document.getElementById("empty-feedback");
+      const feedbackReadList = document.getElementById("feedback-read-list");
+      const feedbackReadCount = document.getElementById("feedback-read-count");
+      const emptyReadFeedback = document.getElementById("empty-read-feedback");
+
+      function hideAllScreens() {
+        allScreens.forEach((screen) => screen.classList.add("hidden"));
+      }
+
+      function showScreen(screen) {
+        hideAllScreens();
+        screen.classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function showSetupScreen() {
+        showScreen(setupScreen);
+      }
+
+      function escapeHtml(text) {
+        return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function formatSubmittedAt(isoString) {
+        try {
+          return new Date(isoString).toLocaleString();
+        } catch {
+          return "Recently";
+        }
+      }
+
+      function loadFeedback() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_FEEDBACK) || "[]");
+        } catch {
+          return memoryFeedback ? [...memoryFeedback] : [];
+        }
+      }
+
+      function saveFeedback(list) {
+        try {
+          localStorage.setItem(STORAGE_FEEDBACK, JSON.stringify(list));
+          memoryFeedback = null;
+        } catch {
+          memoryFeedback = [...list];
+        }
+        updateReadFeedbackLinkLabel();
+      }
+
+      function updateReadFeedbackLinkLabel() {
+        const waiting = loadFeedback().filter((entry) => !entry.read).length;
+        readFeedbackLink.textContent =
+          waiting > 0
+            ? `Read feedback (${waiting} new)`
+            : "Read feedback (Admin)";
+      }
+
+      function clearFeedbackFormErrors() {
+        feedbackFormErrorBox.hidden = true;
+        feedbackFormErrorBox.innerHTML = "";
+        feedbackFormSuccessBox.hidden = true;
+        feedbackFormSuccessBox.textContent = "";
+      }
+
+      function showFeedbackFormErrors(errors) {
+        feedbackFormErrorBox.hidden = false;
+        feedbackFormErrorBox.innerHTML = `<strong>Please fix these before sending:</strong><ul>${errors
+          .map((error) => `<li>${escapeHtml(error)}</li>`)
+          .join("")}</ul>`;
+      }
+
+      function getFeedbackFormData() {
+        return {
+          name: document.getElementById("feedback-name").value.trim(),
+          message: document.getElementById("feedback-message").value.trim(),
+        };
+      }
+
+      function validateFeedback(data) {
+        const errors = [];
+        if (!data.message || data.message.length < 8) {
+          errors.push("Please write a bit more feedback (at least 8 letters).");
+        }
+        if (/https?:\/\//i.test(data.message) || /www\./i.test(data.message)) {
+          errors.push("Please do not include website links.");
+        }
+        return errors;
+      }
+
+      function queueFeedback(data) {
+        const entry = {
+          id: `feedback-${Date.now()}`,
+          name: data.name,
+          message: data.message,
+          submittedAt: new Date().toISOString(),
+          read: false,
+        };
+
+        const feedback = loadFeedback();
+        feedback.unshift(entry);
+        saveFeedback(feedback);
+        return entry;
+      }
+
+      function sendFeedbackEmail(data) {
+        const sender = data.name ? `${data.name} wrote:` : "A visitor wrote:";
+        const body = `${sender}\n\n${data.message}`;
+        const subject = "Spelling Bee Practice feedback";
+        const mailtoUrl = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+      }
+
+      function markFeedbackAsRead(feedbackId) {
+        const feedback = loadFeedback().map((entry) => {
+          if (entry.id !== feedbackId) return entry;
+          return {
+            ...entry,
+            read: true,
+            readAt: new Date().toISOString(),
+          };
+        });
+        saveFeedback(feedback);
+        renderFeedbackList();
+      }
+
+      function buildFeedbackItem(entry, { showMarkRead }) {
+        const item = document.createElement("article");
+        item.className = "review-item" + (entry.read ? " read-item" : "");
+        item.innerHTML = `
+          <div class="review-item-header">
+            <span class="review-item-emoji">💬</span>
+            <div>
+              <p class="review-item-name">${escapeHtml(entry.name || "Anonymous")}</p>
+              <p class="review-meta">${formatSubmittedAt(entry.submittedAt)}${
+                entry.readAt ? ` · Read ${formatSubmittedAt(entry.readAt)}` : ""
+              }</p>
+            </div>
+          </div>
+          <div class="review-facts">
+            <p>${escapeHtml(entry.message)}</p>
+          </div>
+          ${
+            showMarkRead
+              ? `<div class="review-actions">
+                  <button type="button" class="approve-btn" data-id="${entry.id}">Mark as read</button>
+                </div>`
+              : ""
+          }
+        `;
+
+        if (showMarkRead) {
+          item.querySelector(".approve-btn").addEventListener("click", () => {
+            markFeedbackAsRead(entry.id);
+          });
+        }
+
+        return item;
+      }
+
+      function renderFeedbackList() {
+        const allFeedback = loadFeedback();
+        const unreadFeedback = allFeedback.filter((entry) => !entry.read);
+        const readFeedback = allFeedback.filter((entry) => entry.read);
+
+        feedbackList.innerHTML = "";
+        feedbackReadList.innerHTML = "";
+
+        feedbackCount.textContent = `${unreadFeedback.length} new feedback message${
+          unreadFeedback.length === 1 ? "" : "s"
+        }`;
+        feedbackReadCount.textContent = `${readFeedback.length} read message${
+          readFeedback.length === 1 ? "" : "s"
+        }`;
+
+        emptyFeedback.hidden = unreadFeedback.length > 0;
+        emptyReadFeedback.hidden = readFeedback.length > 0;
+
+        unreadFeedback.forEach((entry) => {
+          feedbackList.appendChild(buildFeedbackItem(entry, { showMarkRead: true }));
+        });
+
+        readFeedback.forEach((entry) => {
+          feedbackReadList.appendChild(buildFeedbackItem(entry, { showMarkRead: false }));
+        });
+      }
+
+      function renderReadFeedbackScreen() {
+        if (!feedbackUnlocked) {
+          readFeedbackPanel.hidden = true;
+          pinPanel.hidden = false;
+          return;
+        }
+
+        pinPanel.hidden = true;
+        readFeedbackPanel.hidden = false;
+        renderFeedbackList();
+      }
+
+      function unlockReadFeedback() {
+        if (readFeedbackPinInput.value.trim() === REVIEW_PIN) {
+          feedbackUnlocked = true;
+          renderReadFeedbackScreen();
+          return;
+        }
+
+        alert("Wrong password. Please try again.");
+      }
+
+      function showFeedbackForm() {
+        clearFeedbackFormErrors();
+        feedbackForm.reset();
+        showScreen(feedbackScreen);
+      }
+
+      function showReadFeedbackScreen() {
+        feedbackUnlocked = false;
+        readFeedbackPinInput.value = "";
+        renderReadFeedbackScreen();
+        showScreen(readFeedbackScreen);
+      }
+
+      function handleFeedbackSubmit(event) {
+        event.preventDefault();
+        clearFeedbackFormErrors();
+
+        try {
+          const data = getFeedbackFormData();
+          const errors = validateFeedback(data);
+          if (errors.length > 0) {
+            showFeedbackFormErrors(errors);
+            return;
+          }
+
+          queueFeedback(data);
+          feedbackForm.reset();
+
+          try {
+            sendFeedbackEmail(data);
+          } catch {
+            // Email app may be unavailable; feedback is still saved for admin review.
+          }
+
+          feedbackFormSuccessBox.hidden = false;
+          feedbackFormSuccessBox.textContent =
+            "Thanks for your feedback! We really appreciate your ideas.";
+        } catch (error) {
+          console.error(error);
+          showFeedbackFormErrors([
+            "Something went wrong while sending your feedback. Please try again.",
+          ]);
+        }
+      }
 
       GRADES.forEach(({ id, label }) => {
         const btn = document.createElement("button");
@@ -1016,11 +1614,10 @@
 
       function finishRound() {
         window.speechSynthesis.cancel();
-        gameScreen.classList.add("hidden");
-        resultsScreen.classList.remove("hidden");
         resultsMessage.textContent = getResultsMessage();
         resultsCorrect.textContent = correct;
         resultsWrong.textContent = wrong;
+        showScreen(resultsScreen);
         speakWord("Round complete. You got " + correct + " out of " + WORDS_PER_ROUND + " correct.");
       }
 
@@ -1032,20 +1629,16 @@
         correctCount.textContent = "0";
         wrongCount.textContent = "0";
         gradeBadge.textContent = gradeLabels[selectedGrade];
-        resultsScreen.classList.add("hidden");
-        setupScreen.classList.add("hidden");
-        gameScreen.classList.remove("hidden");
         updatePointsDisplay();
         updateWordProgress();
         loadCurrentWord();
+        showScreen(gameScreen);
         speakWord("Your word is ready. Click hear the word when you want to listen.");
       }
 
       function quitGame() {
         window.speechSynthesis.cancel();
-        gameScreen.classList.add("hidden");
-        resultsScreen.classList.add("hidden");
-        setupScreen.classList.remove("hidden");
+        showSetupScreen();
       }
 
       function checkSpelling() {
@@ -1103,6 +1696,15 @@
       });
 
       updatePointsDisplay();
+      updateReadFeedbackLinkLabel();
+
+      feedbackLink.addEventListener("click", showFeedbackForm);
+      readFeedbackLink.addEventListener("click", showReadFeedbackScreen);
+      feedbackBackBtn.addEventListener("click", showSetupScreen);
+      feedbackCancelBtn.addEventListener("click", showSetupScreen);
+      feedbackForm.addEventListener("submit", handleFeedbackSubmit);
+      readFeedbackBackBtn.addEventListener("click", showSetupScreen);
+      readFeedbackUnlockBtn.addEventListener("click", unlockReadFeedback);
     </script>
   </body>
 </html>
