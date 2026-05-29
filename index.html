@@ -56,116 +56,6 @@
         margin-bottom: 1.75rem;
       }
 
-      .header-tools {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.85rem;
-      }
-
-      .translate-wrap {
-        position: relative;
-        display: inline-flex;
-        flex-direction: column;
-        gap: 0.35rem;
-      }
-
-      .translate-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.35rem;
-        padding: 0.55rem 0.85rem;
-        border-radius: var(--radius);
-        border: 2px solid rgba(28, 25, 23, 0.2);
-        background: #ffffff;
-        color: var(--bee-black);
-        font-family: inherit;
-        font-size: 0.85rem;
-        font-weight: 600;
-        line-height: 1.25;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        white-space: nowrap;
-      }
-
-      .translate-btn-emoji {
-        font-size: 1.15rem;
-        line-height: 1;
-      }
-
-      .translate-btn:hover {
-        background: var(--bee-yellow);
-        transform: translateY(-1px);
-      }
-
-      .translate-menu {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: calc(100% + 0.5rem);
-        min-width: 180px;
-        background: #ffffff;
-        border: 2px solid rgba(245, 158, 11, 0.35);
-        border-radius: var(--radius);
-        padding: 0.65rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        z-index: 20;
-      }
-
-      .translate-menu-title {
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--text-muted);
-        margin-bottom: 0.5rem;
-        padding: 0 0.35rem;
-      }
-
-      .translate-option {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 0.55rem 0.65rem;
-        border: none;
-        border-radius: calc(var(--radius) - 6px);
-        background: transparent;
-        color: var(--text);
-        font-family: inherit;
-        font-size: 0.95rem;
-        cursor: pointer;
-      }
-
-      .translate-option:hover,
-      .translate-option.active {
-        background: #fffbeb;
-        color: var(--honey-dark);
-      }
-
-      .google-translate-host {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-      }
-
-      .goog-te-banner-frame.skiptranslate,
-      #goog-gt-tt,
-      .goog-te-balloon-frame {
-        display: none !important;
-      }
-
-      .skiptranslate iframe {
-        visibility: hidden !important;
-        height: 0 !important;
-      }
-
-      body {
-        top: 0 !important;
-      }
-
       .bee-icon {
         font-size: 3rem;
         line-height: 1;
@@ -195,18 +85,6 @@
         margin-top: 0.35rem;
         font-size: 1.05rem;
         text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
-      }
-
-      .language-mode-badge {
-        display: inline-block;
-        margin-top: 0.65rem;
-        background: #ffffff;
-        color: var(--bee-black);
-        font-weight: 700;
-        font-size: 0.85rem;
-        padding: 0.35rem 0.85rem;
-        border-radius: 999px;
-        text-shadow: none;
       }
 
       .main {
@@ -487,41 +365,6 @@
         outline: none;
         border-color: var(--honey);
         box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
-      }
-
-      .spell-row {
-        display: flex;
-        gap: 0.75rem;
-        align-items: stretch;
-        margin-bottom: 1rem;
-      }
-
-      .spell-row .spell-input {
-        margin-bottom: 0;
-        flex: 1;
-      }
-
-      .say-spelling-btn {
-        flex: 0 0 auto;
-        background: var(--bee-black);
-        color: var(--bee-yellow);
-        border: none;
-        padding: 0 1rem;
-        border-radius: 12px;
-        font-family: inherit;
-        font-size: 0.9rem;
-        font-weight: 600;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-
-      .say-spelling-btn:hover {
-        background: #44403c;
-      }
-
-      .say-spelling-btn.listening {
-        background: var(--red);
-        color: white;
       }
 
       .action-row {
@@ -851,34 +694,6 @@
         <div class="bee-icon" aria-hidden="true">🐝</div>
         <h1>Spelling Bee Practice</h1>
         <p class="tagline">Pick your grade, hear the word, spell it!</p>
-        <p class="language-mode-badge hidden" id="language-mode-badge"></p>
-        <div class="header-tools">
-          <div class="translate-wrap" id="translate-wrap">
-            <button
-              type="button"
-              class="translate-btn"
-              id="translate-btn"
-              aria-label="Translate website"
-              title="Translate website"
-            >
-              <span class="translate-btn-emoji" aria-hidden="true">🌐</span>
-              Translate
-            </button>
-            <div class="translate-menu" id="translate-menu" hidden>
-              <p class="translate-menu-title">Translate site</p>
-              <button type="button" class="translate-option active" data-lang="">English</button>
-              <button type="button" class="translate-option" data-lang="es">Español</button>
-              <button type="button" class="translate-option" data-lang="fr">Français</button>
-              <button type="button" class="translate-option" data-lang="de">Deutsch</button>
-              <button type="button" class="translate-option" data-lang="pt">Português</button>
-              <button type="button" class="translate-option" data-lang="zh-CN">中文</button>
-              <button type="button" class="translate-option" data-lang="ja">日本語</button>
-              <button type="button" class="translate-option" data-lang="ko">한국어</button>
-              <button type="button" class="translate-option" data-lang="ar">العربية</button>
-              <button type="button" class="translate-option" data-lang="hi">हिन्दी</button>
-            </div>
-          </div>
-        </div>
       </header>
 
       <main class="main">
@@ -918,20 +733,15 @@
           </div>
 
           <label class="label" for="spell-input">Type how you think it's spelled</label>
-          <div class="spell-row">
-            <input
-              class="spell-input"
-              id="spell-input"
-              type="text"
-              autocomplete="off"
-              autocapitalize="off"
-              spellcheck="false"
-              placeholder="Type here..."
-            />
-            <button class="say-spelling-btn" id="say-spelling-btn" type="button" title="Say your spelling out loud">
-              🎤 Say it
-            </button>
-          </div>
+          <input
+            class="spell-input"
+            id="spell-input"
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="Type here..."
+          />
 
           <div class="action-row">
             <button class="quit-btn" id="quit-btn" type="button">← Back</button>
@@ -1032,9 +842,6 @@
       </footer>
     </div>
 
-    <div id="google_translate_element" class="google-translate-host"></div>
-
-    <script src="words-extra.js"></script>
     <script>
       // Words get harder as the grade goes up!
       const WORDS_BY_GRADE = {
@@ -1208,32 +1015,6 @@
         ],
       };
 
-      const WORDS_BY_LANGUAGE = Object.assign({ en: WORDS_BY_GRADE }, WORDS_EXTRA);
-
-      const LANGUAGE_NAMES = {
-        en: "English",
-        es: "Español",
-        fr: "Français",
-        de: "Deutsch",
-        pt: "Português",
-        "zh-CN": "中文",
-        ja: "日本語",
-        ko: "한국어",
-        ar: "العربية",
-        hi: "हिन्दी",
-      };
-
-      function getActiveLanguage() {
-        const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([^;]+)/);
-        return match ? match[1] : "en";
-      }
-
-      function getWordListForGrade(grade) {
-        const lang = getActiveLanguage();
-        const pack = WORDS_BY_LANGUAGE[lang] || WORDS_BY_LANGUAGE.en;
-        return pack[grade] || WORDS_BY_LANGUAGE.en[grade];
-      }
-
       const GRADES = [
         { id: "PK", label: "Pre-K" },
         { id: "K", label: "K" },
@@ -1304,7 +1085,6 @@
       const sentenceHint = document.getElementById("sentence-hint");
       const purchasedHint = document.getElementById("purchased-hint");
       const hintBtn = document.getElementById("hint-btn");
-      const saySpellingBtn = document.getElementById("say-spelling-btn");
       const pointsCount = document.getElementById("points-count");
       const setupPoints = document.getElementById("setup-points");
       const correctCount = document.getElementById("correct-count");
@@ -1333,7 +1113,6 @@
       const feedbackReadList = document.getElementById("feedback-read-list");
       const feedbackReadCount = document.getElementById("feedback-read-count");
       const emptyReadFeedback = document.getElementById("empty-read-feedback");
-      const languageModeBadge = document.getElementById("language-mode-badge");
 
       function hideAllScreens() {
         allScreens.forEach((screen) => screen.classList.add("hidden"));
@@ -1587,29 +1366,6 @@
         }
       }
 
-      function updateVoiceLanguageUI() {
-        const activeLang = getActiveLanguage();
-        const langName = LANGUAGE_NAMES[activeLang] || activeLang;
-
-        if (languageModeBadge) {
-          if (activeLang === "en") {
-            languageModeBadge.classList.add("hidden");
-            languageModeBadge.textContent = "";
-          } else {
-            languageModeBadge.classList.remove("hidden");
-            languageModeBadge.textContent = langName + " Spelling Bee";
-          }
-        }
-      }
-
-      function syncTranslateUiFromCookie() {
-        const lang = getActiveLanguage();
-        document.querySelectorAll(".translate-option").forEach((button) => {
-          button.classList.toggle("active", (button.dataset.lang || "") === lang);
-        });
-        updateVoiceLanguageUI();
-      }
-
       GRADES.forEach(({ id, label }) => {
         const btn = document.createElement("button");
         btn.type = "button";
@@ -1624,7 +1380,7 @@
         gradeGrid.appendChild(btn);
       });
 
-      let cachedVoices = {};
+      let cachedVoice = null;
 
       const PREFERRED_VOICES = [
         "Samantha",
@@ -1641,98 +1397,11 @@
         "Google US English",
       ];
 
-      const LANG_SPEAK = {
-        en: {
-          tag: "en-US",
-          intro: "The word is",
-          ready: "Your word is ready. Click hear the word when you want to listen.",
-          roundComplete: (correct, total) =>
-            `Round complete. You got ${correct} out of ${total} correct.`,
-        },
-        es: {
-          tag: "es-ES",
-          intro: "La palabra es",
-          ready: "Tu palabra está lista. Haz clic en escuchar la palabra cuando quieras.",
-          roundComplete: (correct, total) =>
-            `Ronda completa. Obtuviste ${correct} de ${total} correctas.`,
-        },
-        fr: {
-          tag: "fr-FR",
-          intro: "Le mot est",
-          ready: "Ton mot est prêt. Clique sur entendre le mot quand tu veux écouter.",
-          roundComplete: (correct, total) =>
-            `Manche terminée. Tu as ${correct} bonnes réponses sur ${total}.`,
-        },
-        de: {
-          tag: "de-DE",
-          intro: "Das Wort ist",
-          ready: "Dein Wort ist bereit. Klicke auf Wort anhören, wenn du zuhören möchtest.",
-          roundComplete: (correct, total) =>
-            `Runde beendet. Du hast ${correct} von ${total} richtig.`,
-        },
-        pt: {
-          tag: "pt-BR",
-          intro: "A palavra é",
-          ready: "Sua palavra está pronta. Clique em ouvir a palavra quando quiser.",
-          roundComplete: (correct, total) =>
-            `Rodada completa. Você acertou ${correct} de ${total}.`,
-        },
-        "zh-CN": {
-          tag: "zh-CN",
-          intro: "单词是",
-          ready: "你的单词准备好了。想听的时候请点击听单词。",
-          roundComplete: (correct, total) => `本轮结束。你答对了 ${correct} 题，共 ${total} 题。`,
-        },
-        ja: {
-          tag: "ja-JP",
-          intro: "単語は",
-          ready: "単語の準備ができました。聞きたいときは単語を聞くを押してください。",
-          roundComplete: (correct, total) =>
-            `ラウンド終了。${total} 問中 ${correct} 問正解です。`,
-        },
-        ko: {
-          tag: "ko-KR",
-          intro: "단어는",
-          ready: "단어가 준비되었습니다. 들고 싶을 때 단어 듣기를 누르세요.",
-          roundComplete: (correct, total) =>
-            `라운드 완료. ${total}개 중 ${correct}개를 맞혔습니다.`,
-        },
-        ar: {
-          tag: "ar-SA",
-          intro: "الكلمة هي",
-          ready: "كلمتك جاهزة. اضغط على سماع الكلمة عندما تريد الاستماع.",
-          roundComplete: (correct, total) =>
-            `انتهت الجولة. أجبت بشكل صحيح على ${correct} من ${total}.`,
-        },
-        hi: {
-          tag: "hi-IN",
-          intro: "शब्द है",
-          ready: "आपका शब्द तैयार है। सुनना चाहें तो शब्द सुनें पर क्लिक करें।",
-          roundComplete: (correct, total) =>
-            `राउंड पूरा। आपने ${total} में से ${correct} सही लिखे।`,
-        },
-      };
-
-      function getSpeakConfig(langCode) {
-        return LANG_SPEAK[langCode] || LANG_SPEAK.en;
-      }
-
-      function normalizeGuess(text) {
-        return text.trim().toLocaleLowerCase(getSpeakConfig(getActiveLanguage()).tag);
-      }
-
-      function scoreVoice(voice, langCode) {
+      function scoreVoice(voice) {
         const name = voice.name.toLowerCase();
         const lang = voice.lang.toLowerCase();
-        const speakConfig = getSpeakConfig(langCode);
-        const targetTag = speakConfig.tag.toLowerCase();
-        const targetBase = targetTag.split("-")[0];
 
-        if (langCode === "en") {
-          if (!lang.startsWith("en")) return -1;
-        } else if (!(lang === targetTag || lang.startsWith(targetBase))) {
-          return -1;
-        }
+        if (!lang.startsWith("en")) return -1;
 
         let score = 0;
 
@@ -1741,13 +1410,11 @@
         }
         if (voice.localService) score += 25;
 
-        if (langCode === "en") {
-          PREFERRED_VOICES.forEach((preferred, index) => {
-            if (name.includes(preferred.toLowerCase())) {
-              score += 60 - index;
-            }
-          });
-        }
+        PREFERRED_VOICES.forEach((preferred, index) => {
+          if (name.includes(preferred.toLowerCase())) {
+            score += 60 - index;
+          }
+        });
 
         if (name.includes("compact") || name.includes("superstar") || name.includes("cellos")) {
           score -= 80;
@@ -1756,113 +1423,50 @@
         return score;
       }
 
-      function pickBestVoice(langCode = "en") {
-        if (cachedVoices[langCode]) return cachedVoices[langCode];
-
+      function pickBestVoice() {
         const voices = window.speechSynthesis.getVoices();
         if (!voices.length) return null;
 
         const ranked = voices
-          .map((voice) => ({ voice, score: scoreVoice(voice, langCode) }))
+          .map((voice) => ({ voice, score: scoreVoice(voice) }))
           .filter((item) => item.score >= 0)
           .sort((a, b) => b.score - a.score);
 
-        const speakConfig = getSpeakConfig(langCode);
-        const targetBase = speakConfig.tag.split("-")[0];
-
-        const picked =
+        return (
           ranked[0]?.voice ||
-          voices.find((voice) => voice.lang.toLowerCase().startsWith(targetBase)) ||
-          (langCode === "en" ? voices.find((voice) => voice.lang.startsWith("en")) : null) ||
-          voices[0];
+          voices.find((voice) => voice.lang.startsWith("en")) ||
+          voices[0]
+        );
+      }
 
-        cachedVoices[langCode] = picked;
-        return picked;
+      function getVoice() {
+        if (!cachedVoice) cachedVoice = pickBestVoice();
+        return cachedVoice;
       }
 
       window.speechSynthesis.onvoiceschanged = () => {
-        cachedVoices = {};
-        pickBestVoice("en");
+        cachedVoice = pickBestVoice();
       };
-      pickBestVoice("en");
+      getVoice();
 
-      function configureUtterance(utterance, { rate = 0.94, pitch = 1, langCode = "en" } = {}) {
-        const speakConfig = getSpeakConfig(langCode);
-        const voice = pickBestVoice(langCode);
+      function configureUtterance(utterance, { rate = 0.94, pitch = 1 } = {}) {
+        const voice = getVoice();
         if (voice) utterance.voice = voice;
-        utterance.lang = voice?.lang || speakConfig.tag;
+        utterance.lang = voice?.lang || "en-US";
         utterance.rate = rate;
         utterance.pitch = pitch;
         utterance.volume = 1;
       }
 
-      const SpeechRecognition =
-        window.SpeechRecognition || window.webkitSpeechRecognition;
-      let spellingRecognition = null;
-
-      function cleanSpokenSpelling(text) {
-        const compact = text.trim().replace(/\s+/g, "");
-        const lang = getActiveLanguage();
-        if (lang === "en") {
-          return compact.toLowerCase().replace(/[^a-z-]/g, "");
-        }
-        return compact.toLocaleLowerCase(getSpeakConfig(lang).tag);
-      }
-
-      function startSpellingDictation() {
-        if (answered) return;
-
-        if (!SpeechRecognition) {
-          showFeedback(
-            "wrong",
-            "Your browser can't transcribe speech. Try Chrome or Safari."
-          );
-          return;
-        }
-
-        if (spellingRecognition) {
-          spellingRecognition.stop();
-          return;
-        }
-
-        spellingRecognition = new SpeechRecognition();
-        spellingRecognition.lang = getSpeakConfig(getActiveLanguage()).tag;
-        spellingRecognition.interimResults = false;
-        spellingRecognition.maxAlternatives = 1;
-
-        saySpellingBtn.classList.add("listening");
-        saySpellingBtn.textContent = "🔴 Listening...";
-
-        spellingRecognition.onresult = (event) => {
-          const transcript = event.results[0][0].transcript;
-          spellInput.value = cleanSpokenSpelling(transcript);
-          spellInput.focus();
-        };
-
-        spellingRecognition.onerror = () => {
-          showFeedback("wrong", "Couldn't hear you. Try again or type your spelling.");
-        };
-
-        spellingRecognition.onend = () => {
-          spellingRecognition = null;
-          saySpellingBtn.classList.remove("listening");
-          saySpellingBtn.textContent = "🎤 Say it";
-        };
-
-        spellingRecognition.start();
-      }
-
       function speakWord(text, { spellingBee = false } = {}) {
         window.speechSynthesis.cancel();
-        const uiLang = getActiveLanguage();
-        const uiSpeak = getSpeakConfig(uiLang);
 
         if (spellingBee) {
-          const intro = new SpeechSynthesisUtterance(uiSpeak.intro);
-          configureUtterance(intro, { rate: 0.96, pitch: 1.02, langCode: uiLang });
+          const intro = new SpeechSynthesisUtterance("The word is");
+          configureUtterance(intro, { rate: 0.96, pitch: 1.02 });
 
           const word = new SpeechSynthesisUtterance(text + ".");
-          configureUtterance(word, { rate: 0.9, pitch: 1, langCode: uiLang });
+          configureUtterance(word, { rate: 0.9, pitch: 1 });
 
           intro.onend = () => window.speechSynthesis.speak(word);
           window.speechSynthesis.speak(intro);
@@ -1870,22 +1474,20 @@
         }
 
         const utterance = new SpeechSynthesisUtterance(text);
-        configureUtterance(utterance, { langCode: uiLang });
+        configureUtterance(utterance);
         window.speechSynthesis.speak(utterance);
       }
 
       function speakReadyMessage() {
-        const uiSpeak = getSpeakConfig(getActiveLanguage());
-        speakWord(uiSpeak.ready);
+        speakWord("Your word is ready. Click hear the word when you want to listen.");
       }
 
       function speakRoundCompleteMessage() {
-        const uiSpeak = getSpeakConfig(getActiveLanguage());
-        speakWord(uiSpeak.roundComplete(correct, WORDS_PER_ROUND));
+        speakWord("Round complete. You got " + correct + " out of " + WORDS_PER_ROUND + " correct.");
       }
 
       function pickRandomWord() {
-        const list = getWordListForGrade(selectedGrade);
+        const list = WORDS_BY_GRADE[selectedGrade];
         const available = list.filter((item) => !usedWords.includes(item.word));
 
         const choice = available[Math.floor(Math.random() * available.length)];
@@ -1918,8 +1520,8 @@
 
       function buildHintText(wordEntry) {
         const word = wordEntry.word;
-        const firstLetter = [...word][0] || "";
-        const letterCount = [...word].length;
+        const firstLetter = word.charAt(0).toUpperCase();
+        const letterCount = word.length;
 
         return (
           "💡 This word has " +
@@ -1977,9 +1579,6 @@
       }
 
       function loadCurrentWord() {
-        if (spellingRecognition) {
-          spellingRecognition.stop();
-        }
         currentWord = pickRandomWord();
         answered = false;
         hintUsedThisWord = false;
@@ -2038,7 +1637,6 @@
         correctCount.textContent = "0";
         wrongCount.textContent = "0";
         gradeBadge.textContent = gradeLabels[selectedGrade];
-        updateVoiceLanguageUI();
         updatePointsDisplay();
         updateWordProgress();
         loadCurrentWord();
@@ -2054,7 +1652,7 @@
       function checkSpelling() {
         if (answered || !currentWord) return;
 
-        const guess = normalizeGuess(spellInput.value);
+        const guess = spellInput.value.trim().toLowerCase();
         if (!guess) {
           showFeedback("wrong", "Type your spelling first!");
           return;
@@ -2065,7 +1663,7 @@
         checkBtn.classList.add("hidden");
         nextBtn.classList.remove("hidden");
 
-        if (guess === normalizeGuess(currentWord.word)) {
+        if (guess === currentWord.word.toLowerCase()) {
           correct++;
           points++;
           correctCount.textContent = correct;
@@ -2095,7 +1693,6 @@
         if (currentWord) speakWord(currentWord.word, { spellingBee: true });
       });
       hintBtn.addEventListener("click", buyHint);
-      saySpellingBtn.addEventListener("click", startSpellingDictation);
       checkBtn.addEventListener("click", checkSpelling);
       nextBtn.addEventListener("click", goToNextWord);
 
@@ -2117,108 +1714,5 @@
       readFeedbackBackBtn.addEventListener("click", showSetupScreen);
       readFeedbackUnlockBtn.addEventListener("click", unlockReadFeedback);
     </script>
-    <script>
-      const TRANSLATE_LANGUAGES = [
-        { code: "", label: "English" },
-        { code: "es", label: "Español" },
-        { code: "fr", label: "Français" },
-        { code: "de", label: "Deutsch" },
-        { code: "pt", label: "Português" },
-        { code: "zh-CN", label: "中文" },
-        { code: "ja", label: "日本語" },
-        { code: "ko", label: "한국어" },
-        { code: "ar", label: "العربية" },
-        { code: "hi", label: "हिन्दी" },
-      ];
-
-      let translateReady = false;
-      let pendingTranslateLang = null;
-
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            includedLanguages: TRANSLATE_LANGUAGES.map((lang) => lang.code || "en")
-              .filter(Boolean)
-              .join(","),
-            autoDisplay: false,
-          },
-          "google_translate_element"
-        );
-
-        const waitForSelect = window.setInterval(() => {
-          const select = document.querySelector(".goog-te-combo");
-          if (!select) return;
-
-          window.clearInterval(waitForSelect);
-          translateReady = true;
-
-          if (pendingTranslateLang !== null) {
-            applyPageLanguage(pendingTranslateLang);
-            pendingTranslateLang = null;
-          }
-        }, 100);
-      }
-
-      function getTranslateSelect() {
-        return document.querySelector(".goog-te-combo");
-      }
-
-      function applyPageLanguage(langCode) {
-        if (!langCode) {
-          document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-          document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
-          window.location.reload();
-          return;
-        }
-
-        const select = getTranslateSelect();
-        if (!select) {
-          pendingTranslateLang = langCode;
-          return;
-        }
-
-        if (select.value !== langCode) {
-          select.value = langCode;
-          select.dispatchEvent(new Event("change"));
-        }
-
-        document.querySelectorAll(".translate-option").forEach((button) => {
-          button.classList.toggle("active", button.dataset.lang === langCode);
-        });
-
-        updateVoiceLanguageUI();
-      }
-
-      function initTranslateControls() {
-        const translateBtn = document.getElementById("translate-btn");
-        const translateMenu = document.getElementById("translate-menu");
-        const translateWrap = document.getElementById("translate-wrap");
-
-        translateBtn.addEventListener("click", (event) => {
-          event.stopPropagation();
-          translateMenu.hidden = !translateMenu.hidden;
-        });
-
-        translateMenu.querySelectorAll(".translate-option").forEach((button) => {
-          button.addEventListener("click", () => {
-            applyPageLanguage(button.dataset.lang || "");
-            translateMenu.hidden = true;
-            usedWords = [];
-            updateVoiceLanguageUI();
-          });
-        });
-
-        document.addEventListener("click", (event) => {
-          if (!translateWrap.contains(event.target)) {
-            translateMenu.hidden = true;
-          }
-        });
-      }
-
-      initTranslateControls();
-      syncTranslateUiFromCookie();
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
